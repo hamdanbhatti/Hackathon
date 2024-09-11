@@ -1,0 +1,285 @@
+@font-face {
+   font-family: Poppins;
+   src: url("/src/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Poppins, sans-serif;
+}
+
+body {
+   line-height: 1.6;
+   background: linear-gradient(to right, #3a6073, #16222a);
+   color: #333;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+
+h1 {
+   text-align: center;
+   color: #f5f5f5;
+   margin-bottom: 20px;
+}
+
+form#resume {
+   max-width: 600px;
+   width: 100%;
+   background-color: #ffffff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-container {
+   max-width: 600px;
+   width: 100%;
+   margin: 65px auto;
+   padding: 20px;
+   background: #ffffff;
+   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+   text-align: center;
+}
+
+.header h1 {
+   margin-bottom: 10px;
+   color: #16222a;
+}
+
+.header h3 {
+   text-transform: uppercase;
+   font-size: 15px;
+   font-weight: 500;
+}
+
+.img-area {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   overflow: hidden;
+   margin: 25px auto;
+   border: 10px solid white;
+}
+
+.img-area img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.photo-preview-circle {
+   width: 200px;
+   height: 200px;
+   overflow: hidden;
+   margin: 25px auto;
+   border: 10px solid #ddd;
+   border-radius: 50%;
+}
+
+#photo-preview {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.main {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.left,
+.right {
+   flex: 1;
+   padding: 30px;
+}
+
+h2 {
+   background: linear-gradient(to right, #3a6073, #16222a);
+   padding: 15px;
+   color: #fff;
+   margin: 30px 0;
+   font-size: 20px;
+   border-radius: 0 50px 50px 0;
+}
+
+h2 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+}
+
+h2 i {
+   cursor: pointer;
+   margin-left: auto;
+}
+
+p,
+ul li {
+   line-height: 2;
+}
+
+ul li {
+   margin-left: 20px;
+}
+
+.input-group {
+   margin-bottom: 15px;
+}
+
+.input-group {
+   max-height: 1000px; /* Adjust this value based on your content */
+   overflow: hidden;
+   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out,
+      padding 0.5s ease-in-out;
+   opacity: 1;
+   padding: 10px 0;
+}
+
+.input-group.hidden {
+   max-height: 0;
+   opacity: 0;
+   padding: 0;
+}
+
+h2 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+   padding: 10px;
+   transition: background-color 0.3s ease;
+}
+
+h2:hover {
+   background-color: #f0f0f0;
+}
+
+h2 i {
+   transition: transform 0.3s ease;
+}
+
+h2 i.fa-minus {
+   transform: rotate(0deg);
+}
+
+h2 i.fa-plus {
+   transform: rotate(90deg);
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+   width: 100%;
+   padding: 8px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+}
+
+textarea {
+   resize: vertical;
+}
+
+.submit-btn {
+   background-color: #3498db;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+   background-color: #2980b9;
+}
+
+.skillsShowBtn {
+   font-size: 1rem;
+   background-color: green;
+   color: #fff;
+   border: none;
+   padding: 8px;
+}
+
+#skillsShow {
+   display: none;
+}
+#add-experience {
+   border: none;
+   padding: 8px;
+   background-color: green;
+   margin-bottom: 10px;
+   color: #fff;
+}
+#resume-template {
+   max-width: 800px;
+   width: 100%;
+   margin: 65px auto;
+   padding: 20px;
+   background: #ffffff;
+   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 991px) {
+   .resume-container {
+      width: 95%;
+      height: auto;
+   }
+   h2 {
+      font-size: 18px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   form#resume,
+   .resume-container {
+      max-width: 95%;
+   }
+   .main {
+      flex-direction: column;
+   }
+   .left,
+   .right {
+      flex: none;
+      width: 100%;
+   }
+   h2 {
+      font-size: 15px;
+   }
+   .resume-container {
+      margin: 20px auto;
+   }
+   .submit-btn {
+      padding: 8px 16px;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .header h1 {
+      font-size: 24px;
+   }
+   .img-area {
+      width: 150px;
+      height: 150px;
+   }
+   .skillsShowBtn {
+      font-size: 0.9rem;
+      padding: 6px;
+   }
+}
