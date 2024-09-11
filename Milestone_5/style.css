@@ -1,6 +1,6 @@
 @font-face {
    font-family: Poppins;
-   src: url("/src/font/Poppins/Poppins-Regular.ttf");
+   src: url("/fonts/Poppins/Poppins-Regular.ttf");
 }
 
 * {
@@ -180,6 +180,43 @@ label {
    margin-bottom: 5px;
 }
 
+.custom-file-upload {
+   display: inline-block;
+   margin-left: 10px;
+   padding: 10px 20px;
+   cursor: pointer;
+   background-color: #3498db;
+   color: white;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+   background-color: #2980b9;
+   transform: scale(1.05);
+}
+
+input[type="file"] {
+   display: none;
+}
+
+#reupload-photo{
+   background-color: #27ae60;
+   margin-left: 10px;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 10px;
+   transition: all 0.3s ease;
+}
+#reupload-photo:hover {
+   background-color: #27ae60;
+   transform: scale(1.05);
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -194,6 +231,24 @@ textarea {
    resize: vertical;
 }
 
+.remove-experience {
+   background-color: #e74c3c;
+   color: #fff;
+   border: none;
+   padding: 8px 12px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: all 0.3s ease;
+   margin-top: 10px;
+}
+
+.remove-experience:hover {
+   background-color: #c0392b;
+   transform: scale(1.05);
+
+}
+
 .submit-btn {
    background-color: #3498db;
    color: #fff;
@@ -202,11 +257,12 @@ textarea {
    border-radius: 4px;
    cursor: pointer;
    font-size: 16px;
-   transition: background-color 0.3s ease;
+   transition: all.3s ease;
 }
 
 .submit-btn:hover {
    background-color: #2980b9;
+   transform: scale(1.03);
 }
 
 .skillsShowBtn {
@@ -222,11 +278,21 @@ textarea {
 }
 #add-experience {
    border: none;
+   border-radius: 4px;
    padding: 8px;
    background-color: green;
+   margin-top: 10px;
    margin-bottom: 10px;
    color: #fff;
+   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+   transition: all 0.3s ease;
 }
+
+#add-experience:hover{
+   background-color: rgb(18, 119, 18);
+   transform: scale(1.05);
+}
+
 #resume-template {
    max-width: 800px;
    width: 100%;
@@ -235,6 +301,40 @@ textarea {
    background: #ffffff;
    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
+
+.edit-btn {
+   background-color: #3498db;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+   margin-top: 20px;
+}
+
+.edit-btn:hover {
+   background-color: #2980b9;
+}
+
+.download-btn {
+   background-color: #27ae60;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+   margin-top: 20px;
+   margin-left: 10px;
+}
+
+.download-btn:hover {
+   background-color: #2ecc71;
+}
+
 
 @media screen and (max-width: 991px) {
    .resume-container {

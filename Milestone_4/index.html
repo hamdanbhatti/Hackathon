@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CV Builder Editable</title>
+      <link rel="stylesheet" href="style.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+   </head>
+   <body>
+      <h1>Resume Template by Hamdan Bhatti</h1>
+      <form id="resume">
+         <div class="form-section photo-section">
+            <h2>Profile Photo</h2>
+            <div class="input-group photo-upload">
+               <label for="photo">Upload Photo (max 1MB)</label>
+               <input
+                  type="file"
+                  id="photo"
+                  name="photo"
+                  accept="image/*"
+                  required
+               />
+               <div
+                  id="photo-preview-container"
+                  class="photo-preview-circle"
+                  style="display: none"
+               >
+                  <img id="photo-preview" src="" alt="Photo preview" />
+               </div>
+               <button type="button" id="reupload-photo" style="display: none">
+                  Re-upload Photo
+               </button>
+            </div>
+         </div>
+
+         <div class="form-section">
+            <h2>Personal Information</h2>
+            <div class="input-group">
+               <label for="name">Name</label>
+               <input type="text" id="name" name="name" required />
+            </div>
+            <div class="input-group">
+               <label for="age">Age</label>
+               <input type="number" id="age" name="age" required />
+            </div>
+            <div class="input-group">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email" required />
+            </div>
+            <div class="input-group">
+               <label for="phone">Phone</label>
+               <input type="tel" name="phone" id="phone" required />
+            </div>
+         </div>
+
+         <div class="form-section">
+            <h2>About Me <i class="fa-solid fa-minus"></i></h2>
+            <div class="input-group">
+               <label for="about">Tell us about yourself</label>
+               <textarea name="about" id="about" rows="4" required></textarea>
+            </div>
+         </div>
+
+         <div class="form-section">
+            <h2>Education <i class="fa-solid fa-minus"></i></h2>
+            <div class="input-group">
+               <label for="education">Education Details</label>
+               <textarea
+                  name="education"
+                  id="education"
+                  rows="4"
+                  required
+               ></textarea>
+            </div>
+         </div>
+
+         <div class="form-section">
+            <h2>Experience <i class="fa-solid fa-minus"></i></h2>
+            <div id="experience-entries">
+               <div class="experience-entry">
+                  <div class="input-group">
+                     <label for="company-name">Company Name</label>
+                     <input type="text" name="company-name[]" required />
+                  </div>
+                  <div class="input-group">
+                     <label for="job-title">Position</label>
+                     <input type="text" name="job-title[]" required />
+                  </div>
+                  <div class="input-group">
+                     <label for="job-duration">Duration</label>
+                     <input type="text" name="job-duration[]" required />
+                  </div>
+                  <div class="input-group">
+                     <label for="job-description">Job Description</label>
+                     <textarea
+                        name="job-description[]"
+                        rows="4"
+                        required
+                     ></textarea>
+                  </div>
+               </div>
+            </div>
+            <button type="button" id="add-experience">
+               Add Another Experience
+            </button>
+         </div>
+
+         <div class="form-section" id="skills-section">
+            <h2>Skills <i class="fa-solid fa-minus"></i></h2>
+            <div class="input-group">
+               <label for="skills">Add your skills by (,) Separated</label>
+               <textarea name="skills" id="skills" rows="4" required></textarea>
+            </div>
+         </div>
+         <button type="submit" class="submit-btn">Generate your Resume</button>
+      </form>
+
+      <div id="resume-template" style="display: none">
+         <!-- Add this button inside the resume-template div -->
+         <button id="edit-resume" class="edit-btn">Edit Resume</button>
+
+         <div class="container">
+            <div class="header">
+               <div class="img-area">
+                  <img id="resume-photo" src="" alt="" />
+               </div>
+               <h1 id="resume-name"></h1>
+               <div id="resume-about"></div>
+            </div>
+            <div class="main">
+               <div class="left">
+                  <h2>Personal Information</h2>
+                  <p>
+                     <strong>Name: </strong><span id="resume-fullname"></span>
+                  </p>
+                  <p><strong>Age: </strong><span id="resume-age"></span></p>
+                  <p><strong>Email: </strong><span id="resume-email"></span></p>
+                  <p><strong>Phone: </strong><span id="resume-phone"></span></p>
+                  <h2>Skills</h2>
+                  <ul id="resume-skills"></ul>
+                  <h2>Education</h2>
+                  <div id="resume-education"></div>
+               </div>
+               <div class="right">
+                  <h2>Work Experience</h2>
+                  <div id="resume-experience"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="src/script.js" type="module"></script>
+   </body>
+</html>
